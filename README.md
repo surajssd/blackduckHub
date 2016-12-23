@@ -24,5 +24,5 @@ wget -o appmgr.hubinstall.full-$BD_HUB_VERSION.zip https://updates.suite.blackdu
 
 Start automated build
 ```
-./autobuild.sh -i|--image <image name> -l|--license $BD_AUTH_TOKEN
+./autobuild.sh --license $BD_AUTH_TOKEN --image <image name>
 ```
