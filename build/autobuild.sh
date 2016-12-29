@@ -65,7 +65,7 @@ sudo chmod 777 -R appmgr.hubinstall-*
 
 
 #start initial image with the install script
-docker run -ti -h $(hostname) --name=$_CONTAINER_NAME -v $(pwd):/tmp/hubinstall:z -p 4181:4181 -p 8080:8080 -p 7081:7081 -p 55436:55436 -p 8009:8009 -p 8993:8993 -p 8909:8909 $_TMP_IMG_NAME /tmp/hubinstall/install.sh
+docker run -ti -h blackduckctr --name=$_CONTAINER_NAME -v $(pwd):/tmp/hubinstall:z -p 4181:4181 -p 8080:8080 -p 7081:7081 -p 55436:55436 -p 8009:8009 -p 8993:8993 -p 8909:8909 $_TMP_IMG_NAME /tmp/hubinstall/install.sh
 
 # commit the installation container to image
 docker commit --change='CMD [ "/opt/blackduck/maiastra/start.sh" ]' $_CONTAINER_NAME $_IMAGE_NAME
